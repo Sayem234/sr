@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        
+/* import popins, courgette font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* 
+
+/* I choose mobile device style as default, thats why style for it is outside the mediaquery*/
+*{
+    font-family:"Poppins";
+}
+body{
+    background:url("https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80")center center/cover no-repeat;
+    height:100vh;
+    max-height:100vh;
+    overflow:hidden;
+
+ 
+}
+.container{
+    text-align:center;
+}
+h1{
+    
+    margin-top:20px;
+    font-family:sans serif;
+    font-size:30px;
+    text-shadow:1px 1px 2px red;
+    }
+    input,select{
+        width:60%;
+        padding:10px;
+        border:2px solid #ccc;
+        box-shadow:-3px 1px 2px red,-3px 1px 4px #ff8a00;
+        color:#ff8a00;
+        border-radius:10px;
+        box-sizing:border-box;
+    
+    }
+    
+   
+    
+    label{
+        padding:8px;
+        display:inline-block;
+        font-size:14px;
+        color:#f4f4f4;
+        text-shadow:0 0 2px red,1px 1px red,-1px        -1px red,0 0 5px #ff8a00;
+   
+        width:40%;
+  
+    }    
+    button{
+        margin-top:20px;
+        width:120px;
+        height:40px;
+
+        border:none;
+        border-radius:5px;
+
+        background:black;
+        color:#fff;
+
+    
+    
+}
+.fix{
+    display:none;
+}
+form{
+    background:rgba(190,10,10,0.4);
+    padding:5% 0 5% 0;
+    box-shadow:-3px 1px 2px red,-3px 1px 4px #ff8a00;
+    border-radius:20% 5px 5px 5px;
+}
+footer{
+    position:relative;
+    margin-top:10%;
+    padding:10px 0 10px 0;
+    text-align:center;
+    background:rgba(250,250,250,0.5);
+    font-size:16px;
+    width:100%;
+    font-family: 'Courgette', cursive;
+    color:grey;
+       
+        
+}
+footer span{
+   font-family: 'Courgette', cursive;
+   color:#dd2e44;
+   cursor:pointer;
+}
+footer span a{
+    all: unset;
+}
+
+/* This style will be applied to devices which have width greater than 500px*/
+@media only screen and (min-width:500px){
+    h1{
+        font-size:40px;
+    }
+
+footer{
+    position:absolute;
+    bottom:0px;
+       left:0;
+        
+}
+
+
+    body{
+     padding:0 5% 0 5%;
+    
+  }
+    label{
+    width:25%;
+    padding:0;
+    font-size:16px;
+    margin-top:10px;
+        
+    }
+    input,select{
+    width:60%;
+    margin-top:10px;
+    padding:20px;
+        
+    }
+    .fix{
+        display:inline-block;
+     
+    }
+    button{
+        
+        width:60%;
+        
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Simple form</h1>
+    <form> 
+        <div>
+        <label for="author name">Author Name</label>
+        <input id="author name"type="text"placeholder="your name"required>
+        </div>
+        <div>
+        <label for ="Password">Password</label>
+       <input id = "pw"type="password"pattern=".{5,8}"required title="5 to 8 characters"placeholder="create a password">
+    </div>
+    <div>
+     <label for ="Email">Email</label>
+        <input id ="Email"type="email"placeholder="sayem@gmail.com"required>
+    </div>
+    <div>
+        <label for="genre">Genre</label>
+        <select name="genre"id="Genre">
+            <option>Book Genre</option>
+               <option>Fiction</option>
+               <option>Mystery</option>
+         <option>Non-fiction</option>
+               <option>Adventure</option>
+               <option>Horror</option>
+               <option>Biography</option>
+        </select>
+    </div>
+        <div>
+    <label class='fix'></label>    <button>Submit</button>
+        </div>
+</form></br>
+<div>A form by Iftaher Hossen &copy SAYEM</div>
+</html>
